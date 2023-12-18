@@ -3,6 +3,7 @@ This is a Nixie tube clock using four IN-14 Nixie tubes and a neon indicator
 
 This clock has very little testing and I cannot garuntee there will not be issues
 
+Thanks to 9551Dev for helping with The Code!
 
 I got the daylight saving code from MichealIB247 on instructables
 https://www.instructables.com/Adding-Daylight-Savings-Time-to-Your-RTC/
