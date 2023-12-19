@@ -20,6 +20,7 @@ uint8_t current_hour = 0;
 uint8_t current_minute = 0;
 
 bool daylight_savings;
+bool pm_time = true;
 
 const uint8_t indicator_light_pin = 2;
 
@@ -92,8 +93,10 @@ void loop() {
     current_hour = time.hour();
 
     // use pm time
-    if (current_hour > 12) {
+    if (pm_time && current_hour > 12) {
         current_hour = current_hour - 12;
+    } else if (pm_time && current_hour == 0) {
+        current_hour = 12;
     }
 
     // split individual multi-segment numbers into their individual segments
